@@ -101,7 +101,6 @@ export const Home = props => {
       const { id, place, mag, time } = item
       const dateTime = new Date(+time).toLocaleString()
 
-      // console.info('Home [21]', { features, mag, dateTime })
       return (
         <div className='Home__table_row'>
           <div className='Home__table_cell_title'>

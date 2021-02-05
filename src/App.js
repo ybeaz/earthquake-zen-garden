@@ -22,7 +22,6 @@ export const App = () => {
       })
   }, [])
 
-  // console.info('App  [25]', { dataState })
   return (
     <div>
       <BrowserRouter>
