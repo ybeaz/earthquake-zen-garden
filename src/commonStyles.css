@@ -1,0 +1,28 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.color0 {
+  color: #ededed;
+}
+.bgColor0 {
+  background-color: #ededed;
+}
+.color1 {
+  color: #777777; 
+}
+
+.color2 {
+  color: #444444;
+}
+
+.color3 {
+  color: #0011bb;
+}
+
+.color4 {
+  color: #6600cc;
+}
+

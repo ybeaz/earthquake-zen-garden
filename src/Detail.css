@@ -1,0 +1,32 @@
+.Detail__body {
+  display: flex;
+  flex-direction: row;
+}
+.Detail__body_left {
+  flex: 2;
+}
+.Detail__body_center {
+  flex: 3;
+}
+.Detail__page_title {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  padding: 1em 0em 1em 0em;
+}
+.Detail__table {}
+.Detail__table_row {
+  display: flex;
+}
+.Detail__table_cell_param {
+  flex: 1;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.Detail__table_cell_value {
+  flex: 1;
+}
+
+.Detail__body_right {
+  flex: 2;
+}

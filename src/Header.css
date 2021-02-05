@@ -1,0 +1,22 @@
+.Header {
+  background-color: #ededed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  align-items: center;
+}
+.Header__logo_div {}
+.Header__logo {
+  width: 2em;
+}
+.Header__title {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.Header__profile_link {
+  color: #0011bb;
+  text-decoration: underline;
+  font-size: 0.8em;
+  font-weight: 600;
+}

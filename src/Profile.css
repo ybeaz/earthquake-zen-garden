@@ -1,0 +1,53 @@
+.Profile__body {
+  display: flex;
+  flex-direction: row;
+}
+.Profile__body_left {
+  flex: 2;
+}
+.Profile__body_center {
+  flex: 3;
+}
+.Profile__page_title {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  padding: 1em 0em 1em 0em;
+}
+.Profile__content {
+  display: flex;
+  flex: 1;
+}
+.Profile__picture {
+  flex: 1;
+}
+.Profile__picture_img {
+  max-width: 90%;
+}
+.Profile__table {
+  flex: 2;
+}
+.Profile__table_row {
+  display: flex;
+  padding: 0.15em 0 0.15em 0;
+}
+.Profile__table_cell_title {
+  flex: 3;
+}
+
+.Profile__table_row {
+  display: flex;
+}
+.Profile__table_cell_param {
+  flex: 5;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.Profile__table_cell_value {
+  flex: 10;
+  font-size: 0.9em;
+}
+
+.Profile__body_right {
+  flex: 2;
+}
