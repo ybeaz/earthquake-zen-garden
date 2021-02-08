@@ -21,7 +21,7 @@ const keysTransformer = require('ts-transformer-keys/transformer').default
 
 module.exports = {
   entry: {
-    example: ['./src/index.js'],
+    main: ['./src/index.js'],
   },
   output: {
     path: path.resolve(__dirname, 'public'),
