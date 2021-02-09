@@ -1,5 +1,5 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const merge = require('webpack-merge')
+const common = require('./webpack.common.js')
 //https://stackoverflow.com/questions/49053215/webpack-4-how-to-configure-minimize
 const TerserPlugin = require('terser-webpack-plugin')
 
@@ -15,19 +15,9 @@ module.exports = merge(common, {
     sideEffects: true,
     usedExports: true,
     concatenateModules: true,
-    splitChunks: { /*
-      cacheGroups: {
-        commons: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendor',
-            chunks: 'all'
-        }
-      },
-      minSize: 30000,
-      maxAsyncRequests: 5,
-      maxAsyncRequests: 3,
-    */ },
-    noEmitOnErrors: true,
+    splitChunks: {},
+    noEmitOnErrors: false,
+    // emitOnErrors: true,
     minimize: true,
     minimizer: [
       // we specify a custom UglifyJsPlugin here to get source maps in production
@@ -41,4 +31,17 @@ module.exports = merge(common, {
     removeEmptyChunks: true,
     mergeDuplicateChunks: true,
   },
-});
+})
+
+/* splitChunks: {
+      cacheGroups: {
+        commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendor',
+            chunks: 'all'
+        }
+      },
+      minSize: 30000,
+      maxAsyncRequests: 5,
+      maxAsyncRequests: 3,
+}    */

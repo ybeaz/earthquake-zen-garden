@@ -76,7 +76,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.(css|less)$/i,
+        test: /\.css$/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+        ],
+      },
+      {
+        test: /\.(less)$/i,
         exclude: [/node_modules/],
         use: [
           {
@@ -90,34 +102,6 @@ module.exports = {
             options: {},
           },
         ],
-      },
-      {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        loader: 'file-loader?name=assets/[name].[ext]',
-      },
-      {
-        test: /\.(jpe?g|png|gif)$/i,
-        exclude: /node_modules/,
-        use: [
-          'url-loader?limit=10000',
-          'img-loader',
-          'file-loader?name=[name].[ext]?[hash]',
-        ],
-      },
-      // the following 3 rules handle font extraction
-      {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
-      },
-      {
-        test: /\.otf(\?.*)?$/,
-        use:
-          'file-loader?name=/fonts/[name].  [ext]&mimetype=application/font-otf',
-      },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
       },
     ],
   },

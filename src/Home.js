@@ -5,7 +5,8 @@ import './commonStyles.css'
 import './Home.css'
 
 export const Home = props => {
-  const [data, setData] = useState({
+  const { rootPath, slash, data: dataProps } = props
+  const [dataState, setDataState] = useState({
     data: { features: [], metadata: { title: '' } },
     profile: { firstName: '' },
     site: { title: '' },
@@ -18,9 +19,9 @@ export const Home = props => {
   })
 
   useEffect(() => {
-    if (props && props.data && props.data.data && props.data.data.features) {
-      setData(props.data)
-      const featureStateTmp = props.data.data.features.map(item => {
+    if (props && dataProps && dataProps.data && dataProps.data.features) {
+      setDataState(dataProps)
+      const featureStateTmp = dataProps.data.features.map(item => {
         const {
           id,
           properties: { place, mag, time },
@@ -106,7 +107,7 @@ export const Home = props => {
           <div className='Home__table_cell_title'>
             <Link
               className='Home__table_cell_link'
-              to={{ pathname: '/detail', linkPropId: id }}
+              to={{ pathname: `${rootPath}${slash}detail`, linkPropId: id }}
             >
               {place}
             </Link>
@@ -122,7 +123,7 @@ export const Home = props => {
     data: {
       metadata: { title: pageTitle },
     },
-  } = data
+  } = dataState
   return (
     <div className='Home'>
       <div className='Home__body'>
