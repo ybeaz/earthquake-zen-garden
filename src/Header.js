@@ -22,7 +22,7 @@ export const Header = props => {
           ></img>
         </Link>
       </div>
-      <div className='Header__title color1'>{siteTitle}</div>
+      <div className='Header__title color1'>{`Demo: Earthquake Zen Garden ver. 3.12.3`}</div>
       <Link to={`${rootPath}${slash}profile`}>
         <div className='Header__profile_link'>{`Welcome ${firstName}`}</div>
       </Link>

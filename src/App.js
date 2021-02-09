@@ -12,7 +12,7 @@ import { Header } from './Header'
 import { Home } from './Home'
 import { Detail } from './Detail'
 import { Profile } from './Profile'
-// import styles from './CommonStyles.css'
+import styles from './App.css'
 
 const Error404Page = props => {
   return <div>Error404Page</div>
@@ -31,7 +31,7 @@ export const App = () => {
     site: { title: '' },
     rootPath: '',
   })
-
+  console.info()
   useEffect(() => {
     const apiUrl =
       location.host === '127.0.0.1:3420'
@@ -131,6 +131,7 @@ export const App = () => {
     <div>
       <BrowserRouter>
         <Header {...headerProps} />
+        <div className='App__title'></div>
         <Switch>
           {isRedirectRoot || isRedirectUrl ? (
             <Redirect
@@ -157,6 +158,13 @@ export const App = () => {
           ) : null}
         </Switch>
       </BrowserRouter>
+      <div className='App__schema_wrapper'>
+        <img
+          className='App__schema_img'
+          src='https://r1.userto.com/img/earthquake-zen-garden-screens.png'
+          alt='schema'
+        />
+      </div>
     </div>
   )
 }
