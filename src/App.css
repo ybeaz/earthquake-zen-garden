@@ -1,0 +1,14 @@
+.App {}
+.App__title: {
+  align-self: center;
+  font-size: 2rem;
+}
+.App__schema_wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 10em;
+}
+
+.App__schema_img {
+  width: 70%;
+}
